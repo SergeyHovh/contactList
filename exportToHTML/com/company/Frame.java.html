@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Frame.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #606366; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(204,120,50); }
+.s1 { color: rgb(169,183,198); }
+.s2 { color: rgb(106,135,89); }
+.s3 { color: rgb(104,151,187); }
+.s4 { color: rgb(128,128,128); }
+</style>
+</head>
+<BODY BGCOLOR="#2b2b2b">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+Frame.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">com.company</span><span class="s0">;</span><span class="s1"> 
+ 
+</span><span class="s0">import </span><span class="s1">javax.swing.*</span><span class="s0">;</span><span class="s1"> 
+</span><span class="s0">import </span><span class="s1">java.awt.event.ActionEvent</span><span class="s0">;</span><span class="s1"> 
+</span><span class="s0">import </span><span class="s1">java.util.Vector</span><span class="s0">;</span><span class="s1"> 
+ 
+</span><span class="s0">public class </span><span class="s1">Frame </span><span class="s0">extends </span><span class="s1">JFrame { 
+    </span><span class="s0">private static </span><span class="s1">JPanel upperPanel = </span><span class="s0">new </span><span class="s1">JPanel(</span><span class="s0">null</span><span class="s1">)</span><span class="s0">;</span><span class="s1"> 
+    </span><span class="s0">private static </span><span class="s1">JPanel lowerPanel = </span><span class="s0">new </span><span class="s1">JPanel(</span><span class="s0">null</span><span class="s1">)</span><span class="s0">;</span><span class="s1"> 
+    </span><span class="s0">private static </span><span class="s1">JButton b = </span><span class="s0">new </span><span class="s1">JButton(</span><span class="s2">&quot;Add&quot;</span><span class="s1">)</span><span class="s0">;</span><span class="s1"> 
+    </span><span class="s0">final static public int </span><span class="s1">WIDTH = </span><span class="s3">800</span><span class="s0">;</span><span class="s1"> 
+    </span><span class="s0">final static public int </span><span class="s1">HEIGHT = </span><span class="s3">600</span><span class="s0">;</span><span class="s1"> 
+    </span><span class="s0">private static </span><span class="s1">Vector&lt;CustomPanel&gt; customPanelVector = </span><span class="s0">new </span><span class="s1">Vector&lt;CustomPanel&gt;(</span><span class="s3">10</span><span class="s0">,</span><span class="s3">10</span><span class="s1">)</span><span class="s0">;</span><span class="s1"> 
+ 
+    Frame() { 
+        setSize(WIDTH</span><span class="s0">,</span><span class="s1">HEIGHT)</span><span class="s0">;</span><span class="s1"> 
+        upperPanel.setBounds(</span><span class="s3">0</span><span class="s0">, </span><span class="s3">0</span><span class="s0">, super</span><span class="s1">.getWidth()</span><span class="s0">, </span><span class="s3">3 </span><span class="s1">* </span><span class="s0">super</span><span class="s1">.getHeight() / </span><span class="s3">4</span><span class="s1">)</span><span class="s0">;</span><span class="s1"> 
+        lowerPanel.setBounds(</span><span class="s3">0</span><span class="s0">, </span><span class="s1">upperPanel.getHeight()</span><span class="s0">, super</span><span class="s1">.getWidth()</span><span class="s0">, super</span><span class="s1">.getHeight() / </span><span class="s3">4</span><span class="s1">)</span><span class="s0">;</span><span class="s1"> 
+        setResizable(</span><span class="s0">false</span><span class="s1">)</span><span class="s0">;</span><span class="s1"> 
+        lowerPanel.add(b)</span><span class="s0">;</span><span class="s1"> 
+        b.setSize(lowerPanel.getSize())</span><span class="s0">;</span><span class="s1"> 
+        b.addActionListener(</span><span class="s0">new </span><span class="s1">AbstractAction() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">actionPerformed(ActionEvent e) { 
+                addNewButton(upperPanel)</span><span class="s0">;</span><span class="s1"> 
+            } 
+        })</span><span class="s0">;</span><span class="s1"> 
+        </span><span class="s0">super</span><span class="s1">.add(upperPanel)</span><span class="s0">;</span><span class="s1"> 
+        </span><span class="s0">super</span><span class="s1">.add(lowerPanel)</span><span class="s0">;</span><span class="s1"> 
+</span><span class="s4">//        upperPanel.add(upperScrollPanel);</span><span class="s1"> 
+</span><span class="s4">//        upperScrollPanel.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);</span><span class="s1"> 
+        setLayout(</span><span class="s0">null</span><span class="s1">)</span><span class="s0">;</span><span class="s1"> 
+        setVisible(</span><span class="s0">true</span><span class="s1">)</span><span class="s0">;</span><span class="s1"> 
+        exit()</span><span class="s0">;</span><span class="s1"> 
+    } 
+ 
+    </span><span class="s0">private void </span><span class="s1">addNewButton(JComponent panel) { 
+        CustomPanel c = </span><span class="s0">new </span><span class="s1">CustomPanel()</span><span class="s0">;</span><span class="s1"> 
+        customPanelVector.add(c)</span><span class="s0">;</span><span class="s1"> 
+        Main.updatePanel(upperPanel</span><span class="s0">, </span><span class="s1">customPanelVector)</span><span class="s0">;</span><span class="s1"> 
+    } 
+ 
+    </span><span class="s0">private void </span><span class="s1">exit() { 
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE)</span><span class="s0">;</span><span class="s1"> 
+    } 
+ 
+    </span><span class="s0">public static </span><span class="s1">JPanel getUpperPanel() { 
+        </span><span class="s0">return </span><span class="s1">upperPanel</span><span class="s0">;</span><span class="s1"> 
+    } 
+ 
+    </span><span class="s0">public static </span><span class="s1">Vector&lt;CustomPanel&gt; getCustomPanelVector() { 
+        </span><span class="s0">return </span><span class="s1">customPanelVector</span><span class="s0">;</span><span class="s1"> 
+    } 
+}</span></pre>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>CustomPanel.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #606366; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(204,120,50); }
+.s1 { color: rgb(169,183,198); }
+.s2 { color: rgb(106,135,89); }
+.s3 { color: rgb(104,151,187); }
+</style>
+</head>
+<BODY BGCOLOR="#2b2b2b">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+CustomPanel.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">com.company</span><span class="s0">;</span><span class="s1"> 
+ 
+</span><span class="s0">import </span><span class="s1">javax.swing.*</span><span class="s0">;</span><span class="s1"> 
+</span><span class="s0">import </span><span class="s1">java.awt.event.ActionEvent</span><span class="s0">;</span><span class="s1"> 
+</span><span class="s0">import </span><span class="s1">java.util.Vector</span><span class="s0">;</span><span class="s1"> 
+ 
+</span><span class="s0">public class </span><span class="s1">CustomPanel </span><span class="s0">extends </span><span class="s1">JPanel </span><span class="s0">implements </span><span class="s1">ButtonActivity { 
+ 
+    </span><span class="s0">private </span><span class="s1">JButton personalInfo = </span><span class="s0">new </span><span class="s1">JButton()</span><span class="s0">;</span><span class="s1"> 
+    </span><span class="s0">private </span><span class="s1">JButton delete = </span><span class="s0">new </span><span class="s1">JButton(</span><span class="s2">&quot;Delete&quot;</span><span class="s1">)</span><span class="s0">;</span><span class="s1"> 
+    </span><span class="s0">private </span><span class="s1">Vector&lt;CustomPanel&gt; tempVector = Frame.getCustomPanelVector()</span><span class="s0">;</span><span class="s1"> 
+    CustomPanel() { 
+        setSize(Frame.WIDTH</span><span class="s0">, </span><span class="s3">80</span><span class="s1">)</span><span class="s0">;</span><span class="s1"> 
+        personalInfo.setBounds(</span><span class="s3">0</span><span class="s0">, </span><span class="s3">0</span><span class="s0">, </span><span class="s1">((</span><span class="s0">int</span><span class="s1">) (</span><span class="s0">super</span><span class="s1">.getWidth() * </span><span class="s3">0.75</span><span class="s1">))</span><span class="s0">, super</span><span class="s1">.getHeight())</span><span class="s0">;</span><span class="s1"> 
+        delete.setBounds(personalInfo.getWidth()</span><span class="s0">, </span><span class="s3">0</span><span class="s0">, </span><span class="s1">((</span><span class="s0">int</span><span class="s1">) (</span><span class="s0">super</span><span class="s1">.getWidth() * </span><span class="s3">0.25</span><span class="s1">))</span><span class="s0">, super</span><span class="s1">.getHeight())</span><span class="s0">;</span><span class="s1"> 
+        add(personalInfo)</span><span class="s0">;</span><span class="s1"> 
+        add(delete)</span><span class="s0">;</span><span class="s1"> 
+        delete.addActionListener(</span><span class="s0">new </span><span class="s1">AbstractAction() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">actionPerformed(ActionEvent e) { 
+                Delete()</span><span class="s0">;</span><span class="s1"> 
+            } 
+        })</span><span class="s0">;</span><span class="s1"> 
+    } 
+ 
+    </span><span class="s0">public </span><span class="s1">JButton getDelete() { 
+        </span><span class="s0">return </span><span class="s1">delete</span><span class="s0">;</span><span class="s1"> 
+    } 
+ 
+    </span><span class="s0">public </span><span class="s1">JButton getPersonalInfo() { 
+        </span><span class="s0">return </span><span class="s1">personalInfo</span><span class="s0">;</span><span class="s1"> 
+    } 
+ 
+    @Override 
+    </span><span class="s0">public void </span><span class="s1">Delete() { 
+        </span><span class="s0">super</span><span class="s1">.remove(personalInfo)</span><span class="s0">;</span><span class="s1"> 
+        </span><span class="s0">super</span><span class="s1">.remove(delete)</span><span class="s0">;</span><span class="s1"> 
+        tempVector.remove(</span><span class="s0">this</span><span class="s1">)</span><span class="s0">;</span><span class="s1"> 
+        Main.updatePanel(Frame.getUpperPanel()</span><span class="s0">, </span><span class="s1">tempVector)</span><span class="s0">;</span><span class="s1"> 
+    } 
+} 
+</span></pre>
+</body>
+</html>

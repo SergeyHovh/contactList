@@ -25,6 +25,7 @@ public class MainFrame extends SampleFrame {
         addButton.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                Person.getTextFieldHashMap().clear();
                 Person person = new Person();
             }
         });

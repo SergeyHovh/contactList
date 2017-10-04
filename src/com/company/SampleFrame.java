@@ -8,5 +8,6 @@ public class SampleFrame extends JFrame {
         setVisible(true);
         setResizable(false);
         setSize(400, 400);
+        setLocationRelativeTo(null);
     }
 }

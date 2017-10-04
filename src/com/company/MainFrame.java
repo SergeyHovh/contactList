@@ -26,17 +26,15 @@ public class MainFrame extends SampleFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Person.getTextFieldHashMap().clear();
-                Person person = new Person();
+                new Person();
             }
         });
         scrollPane.setSize(upperPanel.getSize());
-        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        scrollPane.getVerticalScrollBar().setEnabled(true);
+//        scrollPane.getVerticalScrollBar().setEnabled(true);
         add(scrollPane);
         add(lowerPanel);
         exit();
     }
-
 
 
     private void exit() {
@@ -55,4 +53,7 @@ public class MainFrame extends SampleFrame {
         return customPanelVector;
     }
 
+    public static void setCustomPanelVector(Vector<CustomPanel> customPanelVector) {
+        MainFrame.customPanelVector = customPanelVector;
+    }
 }

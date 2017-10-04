@@ -4,10 +4,10 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 public class AddNewTextField extends SampleFrame {
-    JLabel l = new JLabel("New Text Field Name");
-    JTextField t = new JTextField();
-    JButton submit = new JButton("Submit");
-    JButton cancel = new JButton("Cancel");
+    private JLabel l = new JLabel("New Text Field Name");
+    private JTextField t = new JTextField();
+    private JButton submit = new JButton("Submit");
+    private JButton cancel = new JButton("Cancel");
 
     AddNewTextField() {
         setTitle("Add New Text Field");
@@ -28,8 +28,6 @@ public class AddNewTextField extends SampleFrame {
                     Person.getTextFieldHashMap().put(t.getText(), new JTextField());
                     Person.showTextFields(Person.getTextFieldHashMap(), new Person());
                     dispose();
-                } else {
-
                 }
             }
         });

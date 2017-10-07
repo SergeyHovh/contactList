@@ -10,12 +10,11 @@ public class MainFrame extends SampleFrame {
     private static JScrollPane scrollPane = new JScrollPane(upperPanel);
     private static JPanel lowerPanel = new JPanel(null);
     private static JButton addButton = new JButton("Add");
-    final static public int WIDTH = 800;
-    final static public int HEIGHT = 600;
+
     private static Vector<CustomPanel> customPanelVector = new Vector<CustomPanel>(10, 10);
 
     MainFrame() {
-        setSize(new Dimension(WIDTH, HEIGHT));
+        setSize(new Dimension(Constants.WIDTH, Constants.HEIGHT));
         setLocationRelativeTo(null);
         upperPanel.setBounds(0, 0, getWidth(), 3 * getHeight() / 4);
         upperPanel.setMinimumSize(new Dimension(getWidth(), 3 * getHeight()));

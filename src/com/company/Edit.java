@@ -3,17 +3,18 @@ package com.company;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.util.LinkedHashMap;
-import java.util.Vector;
+
 
 public class Edit extends SampleFrame {
+    private JButton submit = new JButton("Submit");
+    private JButton cancel = new JButton("Cancel");
+    private JButton addNewField = new JButton("Add New Field");
+    private static LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
+    private static LinkedHashMap<String, JTextField> textFieldLinkedHashMap = new LinkedHashMap<String, JTextField>();
+
     Edit(final CustomPanel customPanel) {
         final int indexOfCustomPanel = MainFrame.getCustomPanelVector().indexOf(customPanel);
-        MainFrame.getCustomPanelVector().remove(customPanel);
         int index = 0;
-        JButton submit = new JButton("Submit");
-        JButton cancel = new JButton("Cancel");
-        final LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
-        final LinkedHashMap<String, JTextField> textFieldLinkedHashMap = new LinkedHashMap<String, JTextField>();
         for (String labels : customPanel.getLabels().keySet()) {
             JLabel label = new JLabel(labels);
             label.setBounds(0, index * 30, getWidth(), 30);
@@ -24,15 +25,25 @@ public class Edit extends SampleFrame {
             add(label);
             add(jTextField);
         }
+
         submit.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                for(String labels : textFieldLinkedHashMap.keySet()) {
+                MainFrame.getCustomPanelVector().remove(customPanel);
+                for (String labels : textFieldLinkedHashMap.keySet()) {
                     map.put(labels, textFieldLinkedHashMap.get(labels).getText());
                 }
                 customPanel.setLabels(map);
                 MainFrame.getCustomPanelVector().add(indexOfCustomPanel, customPanel);
                 Person.updateList(MainFrame.getUpperPanel(), MainFrame.getCustomPanelVector());
+                dispose();
+            }
+        });
+
+        addNewField.addActionListener(new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new AddNewTextField(Constants.EDIT_PERSON, customPanel);
                 dispose();
             }
         });
@@ -44,9 +55,19 @@ public class Edit extends SampleFrame {
             }
         });
 
-        submit.setBounds(0, getHeight() - 100, getWidth() / 2, 50);
-        cancel.setBounds(submit.getWidth(), getHeight() - 100, getWidth() / 2, 50);
+        submit.setBounds(0, getHeight() - 130, getWidth() / 2, 50);
+        addNewField.setBounds(submit.getWidth(), submit.getY(), getWidth() / 2, 50);
+        cancel.setBounds(0, getHeight() - 80, getWidth(), 50);
         add(submit);
         add(cancel);
+        add(addNewField);
+    }
+
+    public static LinkedHashMap<String, JTextField> getTextFieldLinkedHashMap() {
+        return textFieldLinkedHashMap;
+    }
+
+    public static void setTextFieldLinkedHashMap(LinkedHashMap<String, JTextField> textFieldLinkedHashMap) {
+        Edit.textFieldLinkedHashMap = textFieldLinkedHashMap;
     }
 }

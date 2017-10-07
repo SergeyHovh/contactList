@@ -7,24 +7,24 @@ import java.util.Vector;
 
 public class CustomPanel extends JPanel implements PanelActivity {
 
-    private JButton personalInfo = new JButton();
-    private JButton delete = new JButton();
+    private JButton personalInfoButton = new JButton();
+    private JButton deleteButton = new JButton();
     private JButton edit = new JButton();
     private Vector<CustomPanel> tempVector = MainFrame.getCustomPanelVector();
     private double id = 0;
     private HashMap<String, String> labels = new HashMap<String, String>();
 
     CustomPanel() {
-        setSize(MainFrame.WIDTH, 80);
-        personalInfo.setBounds(0, 0, ((int) (getWidth() * 0.8)), getHeight());
-        edit.setBounds(personalInfo.getWidth(), 0, ((int) (getWidth() * 0.1)), getHeight());
-        delete.setBounds(personalInfo.getWidth() + edit.getWidth(), 0, ((int) (getWidth() * 0.1)), getHeight());
+        setSize(Constants.WIDTH, 80);
+        personalInfoButton.setBounds(0, 0, (int) (getWidth()*0.8), getHeight());
+        edit.setBounds(personalInfoButton.getWidth(), 0, (int) (getWidth()*0.1), getHeight());
+        deleteButton.setBounds(edit.getX() + edit.getWidth(), 0, (int) (getWidth()*0.1), getHeight());
         Main.addIconToButton(edit, "icons/edit.png");
-        Main.addIconToButton(delete, "icons/garbage.png");
-        add(personalInfo);
-        add(delete);
+        Main.addIconToButton(deleteButton, "icons/garbage.png");
+        add(personalInfoButton);
+        add(deleteButton);
         add(edit);
-        delete.addActionListener(new AbstractAction() {
+        deleteButton.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Delete();
@@ -49,8 +49,8 @@ public class CustomPanel extends JPanel implements PanelActivity {
         new Edit(this);
     }
 
-    public JButton getPersonalInfo() {
-        return personalInfo;
+    public JButton getPersonalInfoButton() {
+        return personalInfoButton;
     }
 
     public void setId(double id) {

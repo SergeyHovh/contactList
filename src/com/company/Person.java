@@ -29,7 +29,7 @@ public class Person extends SampleFrame {
         addNewField.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new AddNewTextField();
+                new AddNewTextField(Constants.ADD_PERSON, null);
                 dispose();
             }
         });
@@ -66,10 +66,10 @@ public class Person extends SampleFrame {
         }
         c.setId(Math.random());
         c.setLabels(labels);
-        c.getPersonalInfo().addActionListener(new AbstractAction() {
+        c.getPersonalInfoButton().addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                PersonalInfo p = new PersonalInfo(c);
+                new PersonalInfo(c);
             }
         });
         customPanels.add(c);
@@ -79,9 +79,9 @@ public class Person extends SampleFrame {
     static void updateList(JComponent panel, Vector<CustomPanel> customPanelVector) {
         panel.removeAll();
         int buttonID = 0;
-        saveData(customPanelVector, Main.FILE_PATH);
+        saveData(customPanelVector, Constants.FILE_PATH);
         for (CustomPanel current : customPanelVector) {
-            JButton currentButton = current.getPersonalInfo();
+            JButton currentButton = current.getPersonalInfoButton();
             currentButton.setText(current.getLabels().get("Name"));
             // button configs
             current.setSize(panel.getWidth(), current.getHeight());

@@ -7,12 +7,11 @@ import java.util.Vector;
 
 public class Main {
 
-    static final String FILE_PATH = "output.ser";
     public static void main(String[] args) {
 
         new MainFrame();
         try {
-            InputStream file = new FileInputStream(FILE_PATH);
+            InputStream file = new FileInputStream(Constants.FILE_PATH);
             InputStream buffer = new BufferedInputStream(file);
             ObjectInput input = new ObjectInputStream(buffer);
             try {
@@ -27,11 +26,11 @@ public class Main {
         }
     }
 
-    public static void addIconToButton(JButton button, String iconPath) {
+    static void addIconToButton(JButton button, String iconPath) {
         try {
             ImageIcon addIcon = new ImageIcon(iconPath);
             Image addImage = addIcon.getImage();
-            Image newImage = addImage.getScaledInstance((int) (button.getWidth()*0.7), (int) (button.getHeight()*0.7),
+            Image newImage = addImage.getScaledInstance((int) (button.getWidth() * 0.7), (int) (button.getHeight() * 0.7),
                     Image.SCALE_SMOOTH);
             addIcon = new ImageIcon(newImage);
             button.setIcon(addIcon);

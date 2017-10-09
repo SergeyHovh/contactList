@@ -6,13 +6,13 @@ import java.util.LinkedHashMap;
 
 
 public class Edit extends SampleFrame {
-    private JButton submit = new JButton("Submit");
-    private JButton cancel = new JButton("Cancel");
-    private JButton addNewField = new JButton("Add New Field");
-    private static LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
     private static LinkedHashMap<String, JTextField> textFieldLinkedHashMap = new LinkedHashMap<String, JTextField>();
 
     Edit(final CustomPanel customPanel) {
+        JButton submit = new JButton("Submit");
+        JButton cancel = new JButton("Cancel");
+        JButton addNewField = new JButton("Add New Field");
+        final LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
         final int indexOfCustomPanel = MainFrame.getCustomPanelVector().indexOf(customPanel);
         int index = 0;
         for (String labels : customPanel.getLabels().keySet()) {
@@ -63,7 +63,7 @@ public class Edit extends SampleFrame {
         add(addNewField);
     }
 
-    public static LinkedHashMap<String, JTextField> getTextFieldLinkedHashMap() {
+    static LinkedHashMap<String, JTextField> getTextFieldLinkedHashMap() {
         return textFieldLinkedHashMap;
     }
 

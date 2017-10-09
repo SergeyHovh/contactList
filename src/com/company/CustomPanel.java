@@ -46,6 +46,7 @@ public class CustomPanel extends JPanel implements PanelActivity {
 
     @Override
     public void Edit() {
+        Edit.getTextFieldLinkedHashMap().clear();
         new Edit(this);
     }
 

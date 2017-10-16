@@ -15,7 +15,6 @@ public class MainFrame extends SampleFrame {
 
     MainFrame() {
         setSize(new Dimension(Constants.WIDTH, Constants.HEIGHT));
-        setLocationRelativeTo(null);
         upperPanel.setBounds(0, 0, Constants.WIDTH, 3 * Constants.HEIGHT / 4);
         upperPanel.setMinimumSize(new Dimension(getWidth(), getHeight()));
         lowerPanel.setBounds(0, upperPanel.getHeight(), Constants.WIDTH, Constants.HEIGHT / 4);

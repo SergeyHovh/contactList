@@ -2,36 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97819dea-476d-4d75-ace1-3e5a5cf8766d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/contactsVector.ser" afterPath="$PROJECT_DIR$/data/contactsVector.ser" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/AddNewTextField$1.class" afterPath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/AddNewTextField$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/AddNewTextField$2.class" afterPath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/AddNewTextField$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/AddNewTextField$3.class" afterPath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/AddNewTextField$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/AddNewTextField$4.class" afterPath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/AddNewTextField$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/AddNewTextField.class" afterPath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/AddNewTextField.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/Constants.class" afterPath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/CustomPanel$1.class" afterPath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/CustomPanel$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/CustomPanel$2.class" afterPath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/CustomPanel$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/CustomPanel.class" afterPath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/CustomPanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/Edit.class" afterPath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/Edit.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/Main.class" afterPath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/MainFrame$1.class" afterPath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/MainFrame$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/MainFrame.class" afterPath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/MainFrame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/Person$1.class" afterPath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/Person$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/Person$2.class" afterPath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/Person$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/Person$3.class" afterPath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/Person$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/Person.class" afterPath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/Person.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/PersonalInfo.class" afterPath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/PersonalInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/SampleFrame.class" afterPath="$PROJECT_DIR$/out/production/IDEA_Project/com/company/SampleFrame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/contactsVector.dat" afterPath="$PROJECT_DIR$/data/contactsVector.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/AddNewTextField.java" afterPath="$PROJECT_DIR$/src/com/company/AddNewTextField.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Constants.java" afterPath="$PROJECT_DIR$/src/com/company/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/CustomPanel.java" afterPath="$PROJECT_DIR$/src/com/company/CustomPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Edit.java" afterPath="$PROJECT_DIR$/src/com/company/Edit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/MainFrame.java" afterPath="$PROJECT_DIR$/src/com/company/MainFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Person.java" afterPath="$PROJECT_DIR$/src/com/company/Person.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/PersonalInfo.java" afterPath="$PROJECT_DIR$/src/com/company/PersonalInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/SampleFrame.java" afterPath="$PROJECT_DIR$/src/com/company/SampleFrame.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainFrame.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainFrame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/MainFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+            <state relative-caret-position="136">
+              <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Person.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Person.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="29" column="19" lean-forward="true" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+            <state relative-caret-position="0">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -166,8 +139,8 @@
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/SampleFrame.java" />
         <option value="$PROJECT_DIR$/src/com/company/AddNewTextField.java" />
-        <option value="$PROJECT_DIR$/src/com/company/MainFrame.java" />
         <option value="$PROJECT_DIR$/src/com/company/Person.java" />
+        <option value="$PROJECT_DIR$/src/com/company/MainFrame.java" />
       </list>
     </option>
   </component>
@@ -512,12 +485,13 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5092025" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.49079755" order="2" side_tool="false" content_ui="tabs" x="70" y="312" width="1304" height="153" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287037" sideWeight="0.49079755" order="2" side_tool="false" content_ui="tabs" x="70" y="312" width="1304" height="153" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -535,11 +509,46 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -918,6 +927,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="61" lean-forward="false" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -932,16 +944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
           <caret line="45" column="30" lean-forward="false" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/MainFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -971,8 +973,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Person.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="29" column="19" lean-forward="true" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+        <state relative-caret-position="0">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/MainFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

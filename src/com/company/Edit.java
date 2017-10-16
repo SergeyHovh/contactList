@@ -63,7 +63,7 @@ public class Edit extends SampleFrame {
         add(addNewField);
     }
 
-    static LinkedHashMap<String, JTextField> getTextFieldLinkedHashMap() {
+    public static LinkedHashMap<String, JTextField> getTextFieldLinkedHashMap() {
         return textFieldLinkedHashMap;
     }
 

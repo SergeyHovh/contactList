@@ -16,20 +16,23 @@ public class MainFrame extends SampleFrame {
     MainFrame() {
         setSize(new Dimension(Constants.WIDTH, Constants.HEIGHT));
         setLocationRelativeTo(null);
-        upperPanel.setBounds(0, 0, getWidth(), 3 * getHeight() / 4);
-        upperPanel.setMinimumSize(new Dimension(getWidth(), 3 * getHeight()));
-        lowerPanel.setBounds(0, upperPanel.getHeight(), getWidth(), getHeight() / 4);
+        upperPanel.setBounds(0, 0, Constants.WIDTH, 3 * Constants.HEIGHT / 4);
+        upperPanel.setMinimumSize(new Dimension(getWidth(), getHeight()));
+        lowerPanel.setBounds(0, upperPanel.getHeight(), Constants.WIDTH, Constants.HEIGHT / 4);
         lowerPanel.add(addButton);
         addButton.setSize(lowerPanel.getSize());
         addButton.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Person.getTextFieldHashMap().clear();
-                new Person();
+                new Person(null);
             }
         });
         scrollPane.setSize(upperPanel.getSize());
+        scrollPane.getHorizontalScrollBar().setEnabled(false);
 //        scrollPane.getVerticalScrollBar().setEnabled(true);
+        upperPanel.setPreferredSize(new Dimension(Constants.WIDTH, Constants.HEIGHT));
+        scrollPane.setPreferredSize(new Dimension(Constants.WIDTH, Constants.HEIGHT));
         add(scrollPane);
         add(lowerPanel);
         exit();

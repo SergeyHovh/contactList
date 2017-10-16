@@ -3,20 +3,31 @@ package com.company;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.io.*;
-import java.util.*;
+import java.util.LinkedHashMap;
+import java.util.Vector;
 
 public class Person extends SampleFrame {
-    private JButton submit = new JButton("Submit");
-    private JButton addNewField = new JButton("Add new Field");
     private static LinkedHashMap<String, JTextField> textFieldHashMap = new LinkedHashMap<String, JTextField>();
+    private String picPath = "";
+    private JButton photo = new JButton("Add Photo");
 
-    Person() {
+
+    Person(final CustomPanel customPanel) {
+        int buttonY = getHeight() - 110;
+        int buttonWidth = getWidth() / 3;
+        int buttonHeight = 80;
         init();
         showTextFields(textFieldHashMap, this);
-        submit.setBounds(0, getHeight() - 100, getWidth() / 2, 50);
-        addNewField.setBounds(submit.getWidth(), getHeight() - 100, getWidth() / 2, 50);
+        JButton submit = new JButton("Submit");
+        submit.setBounds(0, buttonY, buttonWidth, buttonHeight);
+
+        JButton addNewField = new JButton("Add new Field");
+        addNewField.setBounds(submit.getWidth(), buttonY, buttonWidth, buttonHeight);
+
+        photo.setBounds(addNewField.getX() + addNewField.getWidth(), buttonY, buttonWidth, buttonHeight);
         add(submit);
         add(addNewField);
+        add(photo);
 
         submit.addActionListener(new AbstractAction() {
             @Override
@@ -29,8 +40,31 @@ public class Person extends SampleFrame {
         addNewField.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new AddNewTextField(Constants.ADD_PERSON, null);
+                CustomPanel c = new CustomPanel();
+                LinkedHashMap<String, String> labels = new LinkedHashMap<String, String>();
+                for (String current : textFieldHashMap.keySet()) {
+                    String temp = textFieldHashMap.get(current).getText();
+                    labels.put(current, temp);
+                    textFieldHashMap.get(current).setText("");
+                }
+                c.setLabels(labels);
+                new AddNewTextField(Constants.ADD_PERSON, c);
                 dispose();
+            }
+        });
+
+        photo.addActionListener(new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser fc = new JFileChooser();
+                fc.setCurrentDirectory(new File(System.getProperty("user.home")));
+                int finalResult = fc.showOpenDialog(null);
+                if (finalResult == JFileChooser.APPROVE_OPTION) {
+                    File pic = fc.getSelectedFile();
+                    picPath = pic.getAbsolutePath();
+                    photo.setIcon(Main.resizeIcon(new ImageIcon(picPath), photo.getWidth(), photo.getHeight()));
+                    photo.setText("");
+                }
             }
         });
     }
@@ -41,7 +75,7 @@ public class Person extends SampleFrame {
         textFieldHashMap.put("Date of birth", new JTextField());
     }
 
-    public static void showTextFields(LinkedHashMap<String, JTextField> map, JFrame frame) {
+    static void showTextFields(LinkedHashMap<String, JTextField> map, JFrame frame) {
         int fieldIndex = 0;
         int height = 30;
 
@@ -66,6 +100,14 @@ public class Person extends SampleFrame {
         }
         c.setId(Math.random());
         c.setLabels(labels);
+        if (!picPath.equals("")) {
+            c.setIcon(Main.addIconToButton(c.getPersonalInfoButton(), picPath));
+            c.setIconPath(picPath);
+        } else {
+            c.setIcon(Main.addIconToButton(c.getPersonalInfoButton(), Constants.DEFAULT_ICON));
+            c.setIconPath(Constants.DEFAULT_ICON);
+        }
+
         c.getPersonalInfoButton().addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -107,15 +149,11 @@ public class Person extends SampleFrame {
         }
     }
 
-    public static LinkedHashMap<String, JTextField> getTextFieldHashMap() {
+    static LinkedHashMap<String, JTextField> getTextFieldHashMap() {
         return textFieldHashMap;
     }
 
     public static void setTextFieldHashMap(LinkedHashMap<String, JTextField> textFieldHashMap) {
         Person.textFieldHashMap = textFieldHashMap;
-    }
-
-    public JButton getAddNewField() {
-        return addNewField;
     }
 }

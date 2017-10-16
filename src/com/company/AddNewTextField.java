@@ -9,7 +9,7 @@ public class AddNewTextField extends SampleFrame {
     private JButton submit = new JButton("Submit");
     private JButton cancel = new JButton("Cancel");
 
-    AddNewTextField(final int frameID, final CustomPanel panel) {
+    AddNewTextField(final int frameID, final CustomPanel customPanel) {
         setTitle("Add New Text Field");
         setSize(400, 150);
         setLocationRelativeTo(null);
@@ -28,7 +28,7 @@ public class AddNewTextField extends SampleFrame {
                     public void actionPerformed(ActionEvent e) {
                         if(!t.getText().isEmpty()) {
                             Person.getTextFieldHashMap().put(t.getText(), new JTextField());
-                            Person.showTextFields(Person.getTextFieldHashMap(), new Person());
+                            Person.showTextFields(Person.getTextFieldHashMap(), new Person(customPanel));
                             dispose();
                         }
                     }
@@ -36,7 +36,7 @@ public class AddNewTextField extends SampleFrame {
                 cancel.addActionListener(new AbstractAction() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        Person.showTextFields(Person.getTextFieldHashMap(), new Person());
+                        Person.showTextFields(Person.getTextFieldHashMap(), new Person(customPanel));
                         dispose();
                     }
                 });
@@ -47,7 +47,7 @@ public class AddNewTextField extends SampleFrame {
                     public void actionPerformed(ActionEvent e) {
                         if(!t.getText().isEmpty()) {
                             Edit.getTextFieldLinkedHashMap().put(t.getText(), new JTextField());
-                            Person.showTextFields(Edit.getTextFieldLinkedHashMap(), new Edit(panel));
+                            Person.showTextFields(Edit.getTextFieldLinkedHashMap(), new Edit(customPanel));
                             dispose();
                         }
                     }
@@ -55,7 +55,7 @@ public class AddNewTextField extends SampleFrame {
                 cancel.addActionListener(new AbstractAction() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        Person.showTextFields(Person.getTextFieldHashMap(), new Edit(panel));
+                        Person.showTextFields(Edit.getTextFieldLinkedHashMap(), new Edit(customPanel));
                         dispose();
                     }
                 });

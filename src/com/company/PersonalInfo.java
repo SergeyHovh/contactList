@@ -11,11 +11,17 @@ public class PersonalInfo extends SampleFrame {
         int labelIndex = 0;
         int height = 30;
 
-        setSize(400, 400);
+        setSize(Constants.WIDTH, Constants.HEIGHT);
         setResizable(true);
-
+        JPanel iconPanel = new JPanel(null);
         JPanel panel = new JPanel(null);
-        panel.setBounds(0, 0, getWidth(), getHeight());
+        iconPanel.setBounds(0, 0, getWidth(), getHeight() / 5);
+        panel.setBounds(0, iconPanel.getHeight(), getWidth(), 4 * getHeight() / 5);
+        JLabel iconLabel = new JLabel();
+        iconLabel.setIcon(Main.resizeIcon(new ImageIcon(customPanel.getIconPath()), iconPanel.getHeight()));
+        iconLabel.setBounds(0, 0,
+                iconPanel.getWidth(), iconPanel.getHeight());
+        iconPanel.add(iconLabel);
 
         for (String currentLabelText : customPanel.getLabels().keySet()) {
             // label
@@ -36,5 +42,6 @@ public class PersonalInfo extends SampleFrame {
             panel.add(currentLabel);
         }
         add(panel);
+        add(iconPanel);
     }
 }

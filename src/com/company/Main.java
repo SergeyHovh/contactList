@@ -26,17 +26,26 @@ public class Main {
         }
     }
 
-    static void addIconToButton(JButton button, String iconPath) {
+    static ImageIcon addIconToButton(JButton button, String iconPath) {
         try {
-            ImageIcon addIcon = new ImageIcon(iconPath);
-            Image addImage = addIcon.getImage();
-            Image newImage = addImage.getScaledInstance((int) (button.getWidth() * 0.7), (int) (button.getHeight() * 0.7),
-                    Image.SCALE_SMOOTH);
-            addIcon = new ImageIcon(newImage);
+            ImageIcon addIcon = resizeIcon(new ImageIcon(iconPath), (int) (button.getHeight() * 0.8));
             button.setIcon(addIcon);
+            return addIcon;
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return null;
     }
 
+    static ImageIcon resizeIcon (ImageIcon icon, int size) {
+        Image addImage = icon.getImage();
+        Image newImage = addImage.getScaledInstance(size, size, Image.SCALE_SMOOTH);
+        return new ImageIcon(newImage);
+    }
+
+    static ImageIcon resizeIcon (ImageIcon icon, int width, int height) {
+        Image addImage = icon.getImage();
+        Image newImage = addImage.getScaledInstance(width, height, Image.SCALE_SMOOTH);
+        return new ImageIcon(newImage);
+    }
 }
